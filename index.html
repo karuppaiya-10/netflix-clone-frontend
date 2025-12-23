@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix Frontend Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">NETFLIX</div>
+    <ul class="nav-links">
+      <li>Home</li>
+      <li>TV Shows</li>
+      <li>Movies</li>
+      <li>Login</li>
+    </ul>
+    <button id="themeToggle" class="theme-btn">🌙</button>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Unlimited Movies & Shows</h1>
+      <p>Watch anywhere. Cancel anytime.</p>
+      <button class="play-btn">▶ Play</button>
+      <button class="info-btn">ℹ More Info</button>
+    </div>
+  </section>
+
+  <!-- Search & Filter -->
+  <div class="controls">
+    <input type="text" id="searchInput" placeholder="Search movies..." />
+    <select id="categoryFilter">
+      <option value="All">All</option>
+      <option value="Trending">Trending</option>
+      <option value="TopRated">Top Rated</option>
+      <option value="Action">Action</option>
+    </select>
+  </div>
+
+  <!-- Movies -->
+  <section class="movies">
+    <button class="arrow left" onclick="scrollMovies(-1)">❮</button>
+
+    <div class="movie-row" id="movieContainer">
+      <div class="skeleton"></div>
+      <div class="skeleton"></div>
+      <div class="skeleton"></div>
+      <div class="skeleton"></div>
+    </div>
+
+    <button class="arrow right" onclick="scrollMovies(1)">❯</button>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <h2 id="modalTitle"></h2>
+      <p id="modalDesc"></p>
+      <button onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
