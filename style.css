@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #111;
+  color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.9);
+  z-index: 100;
+}
+
+.logo {
+  color: red;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.theme-btn {
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1524985069026-dd778a71c7b4")
+    center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+}
+
+.hero-content {
+  max-width: 500px;
+}
+
+.play-btn,
+.info-btn {
+  padding: 10px 20px;
+  border: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.play-btn {
+  background: red;
+  color: white;
+}
+
+.info-btn {
+  background: gray;
+  color: white;
+}
+
+/* Controls */
+.controls {
+  margin-top: 100px;
+  padding: 25px 40px;
+  display: flex;
+  gap: 20px;
+}
+
+.controls input {
+  width: 320px;          /* 🔹 bigger search box */
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+}
+
+.controls select {
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+}
+
+/* Movies */
+.movies {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.movie-row {
+  display: flex;
+  gap: 15px;
+  padding: 20px 40px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.movie-card {
+  min-width: 200px;
+  text-align: center;
+}
+
+.movie-card img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.movie-card img:hover {
+  transform: scale(1.1);
+}
+
+.rating {
+  color: gold;
+  font-size: 14px;
+}
+
+/* Arrows */
+.arrow {
+  background: rgba(0,0,0,0.7);
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  height: 300px;
+}
+
+/* Skeleton Loader */
+.skeleton {
+  width: 200px;
+  height: 300px;
+  background: linear-gradient(90deg, #222, #333, #222);
+  animation: shimmer 1.5s infinite;
+  border-radius: 6px;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200px; }
+  100% { background-position: 200px; }
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #111;
+  padding: 20px;
+  width: 300px;
+}
+
+/* Light Theme */
+body.light {
+  background: #f4f4f4;
+  color: #000;
+}
+
+body.light .navbar,
+body.light .modal-content {
+  background: #fff;
+  color: #000;
+}
